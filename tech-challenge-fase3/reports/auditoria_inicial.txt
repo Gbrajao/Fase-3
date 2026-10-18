@@ -1,0 +1,458 @@
+
+
+######## CAMADA GOLD ########
+
+======================================================================
+ARQUIVO: alunos_municipio_analitico.parquet
+CAMADA: GOLD
+======================================================================
+Quantidade de registros: 2773
+Quantidade de colunas: 13
+
+COLUNAS E TIPOS:
+ano                                   int64
+id_municipio                            str
+municipio                               str
+total_registros_amostra               int64
+alunos_presentes                      int64
+alunos_alfabetizados                  int64
+proficiencia_media                  float64
+percentual_alfabetizados_amostra    float64
+taxa_alfabetizacao                  float64
+meta_alfabetizacao_2024             float64
+nivel_alfabetizacao                 float64
+percentual_participacao             float64
+diferenca_amostra_taxa_oficial      float64
+
+VALORES AUSENTES:
+proficiencia_media                504
+taxa_alfabetizacao                 66
+meta_alfabetizacao_2024           116
+nivel_alfabetizacao                66
+percentual_participacao            66
+diferenca_amostra_taxa_oficial     66
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano id_municipio             municipio  total_registros_amostra  alunos_presentes  alunos_alfabetizados  proficiencia_media  percentual_alfabetizados_amostra  taxa_alfabetizacao  meta_alfabetizacao_2024  nivel_alfabetizacao  percentual_participacao  diferenca_amostra_taxa_oficial
+2024      1100015 Alta Floresta D'Oeste                        2                 2                     0          713.675000                               0.0               67.79                    67.08                  3.0                    89.87                          -67.79
+2024      1100023             Ariquemes                       10                 6                     4          748.161667                              40.0               65.62                    65.22                  3.0                    88.76                          -25.62
+2024      1100031                Cabixi                        1                 0                     0                 NaN                               0.0               75.88                    70.85                  4.0                    92.59                          -75.88
+
+======================================================================
+ARQUIVO: municipio_enriquecido_ibge.parquet
+CAMADA: GOLD
+======================================================================
+Quantidade de registros: 10704
+Quantidade de colunas: 20
+
+COLUNAS E TIPOS:
+ano                          int64
+id_municipio                   str
+rede                           str
+taxa_alfabetizacao         float64
+meta_alfabetizacao_2024    float64
+meta_alfabetizacao_2025    float64
+meta_alfabetizacao_2026    float64
+meta_alfabetizacao_2027    float64
+meta_alfabetizacao_2028    float64
+meta_alfabetizacao_2029    float64
+meta_alfabetizacao_2030      int64
+nivel_alfabetizacao        float64
+percentual_participacao    float64
+nome_municipio                 str
+sigla_uf                       str
+nome_uf                        str
+regiao                         str
+meta_ano                   float64
+diferenca_meta             float64
+atingiu_meta                  bool
+
+VALORES AUSENTES:
+taxa_alfabetizacao          120
+meta_alfabetizacao_2024     240
+nivel_alfabetizacao         120
+percentual_participacao     120
+meta_ano                   5472
+diferenca_meta             5472
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano id_municipio      rede  taxa_alfabetizacao  meta_alfabetizacao_2024  meta_alfabetizacao_2025  meta_alfabetizacao_2026  meta_alfabetizacao_2027  meta_alfabetizacao_2028  meta_alfabetizacao_2029  meta_alfabetizacao_2030  nivel_alfabetizacao  percentual_participacao   nome_municipio sigla_uf             nome_uf   regiao  meta_ano  diferenca_meta  atingiu_meta
+2023      4301750 Municipal                 NaN                      NaN                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  NaN                      NaN Barão do Triunfo       RS   Rio Grande do Sul      Sul       NaN             NaN         False
+2024      4301750 Municipal                4.40                      NaN                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  0.0                    92.59 Barão do Triunfo       RS   Rio Grande do Sul      Sul       NaN             NaN         False
+2024      2406908 Municipal               42.86                     7.94                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  1.0                    84.00         Lucrécia       RN Rio Grande do Norte Nordeste      7.94           34.92          True
+
+======================================================================
+ARQUIVO: resultado_meta_brasil.parquet
+CAMADA: GOLD
+======================================================================
+Quantidade de registros: 3
+Quantidade de colunas: 13
+
+COLUNAS E TIPOS:
+ano                          int64
+rede                           str
+taxa_alfabetizacao         float64
+meta_alfabetizacao_2024    float64
+meta_alfabetizacao_2025    float64
+meta_alfabetizacao_2026    float64
+meta_alfabetizacao_2027    float64
+meta_alfabetizacao_2028    float64
+meta_alfabetizacao_2029    float64
+meta_alfabetizacao_2030      int64
+percentual_participacao    float64
+meta_ano                   float64
+diferenca_meta             float64
+
+VALORES AUSENTES:
+meta_ano          1
+diferenca_meta    1
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano    rede  taxa_alfabetizacao  meta_alfabetizacao_2024  meta_alfabetizacao_2025  meta_alfabetizacao_2026  meta_alfabetizacao_2027  meta_alfabetizacao_2028  meta_alfabetizacao_2029  meta_alfabetizacao_2030  percentual_participacao  meta_ano  diferenca_meta
+2025 Pública                66.0                     60.0                    64.00                    67.00                    71.00                    74.00                    77.00                       80                    88.00      64.0             2.0
+2024 Pública                59.2                     59.9                    63.77                    67.47                    70.97                    74.23                    77.24                       80                    87.37      59.9            -0.7
+2023 Pública                55.9                     59.9                    63.77                    67.47                    70.97                    74.23                    77.24                       80                    86.00       NaN             NaN
+
+======================================================================
+ARQUIVO: resultado_meta_municipio.parquet
+CAMADA: GOLD
+======================================================================
+Quantidade de registros: 10704
+Quantidade de colunas: 16
+
+COLUNAS E TIPOS:
+ano                          int64
+id_municipio                   str
+rede                           str
+taxa_alfabetizacao         float64
+meta_alfabetizacao_2024    float64
+meta_alfabetizacao_2025    float64
+meta_alfabetizacao_2026    float64
+meta_alfabetizacao_2027    float64
+meta_alfabetizacao_2028    float64
+meta_alfabetizacao_2029    float64
+meta_alfabetizacao_2030      int64
+nivel_alfabetizacao        float64
+percentual_participacao    float64
+meta_ano                   float64
+diferenca_meta             float64
+atingiu_meta                  bool
+
+VALORES AUSENTES:
+taxa_alfabetizacao          120
+meta_alfabetizacao_2024     240
+nivel_alfabetizacao         120
+percentual_participacao     120
+meta_ano                   5472
+diferenca_meta             5472
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano id_municipio      rede  taxa_alfabetizacao  meta_alfabetizacao_2024  meta_alfabetizacao_2025  meta_alfabetizacao_2026  meta_alfabetizacao_2027  meta_alfabetizacao_2028  meta_alfabetizacao_2029  meta_alfabetizacao_2030  nivel_alfabetizacao  percentual_participacao  meta_ano  diferenca_meta  atingiu_meta
+2023      4301750 Municipal                 NaN                      NaN                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  NaN                      NaN       NaN             NaN         False
+2024      4301750 Municipal                4.40                      NaN                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  0.0                    92.59       NaN             NaN         False
+2024      2406908 Municipal               42.86                     7.94                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  1.0                    84.00      7.94           34.92          True
+
+======================================================================
+ARQUIVO: resultado_meta_uf.parquet
+CAMADA: GOLD
+======================================================================
+Quantidade de registros: 54
+Quantidade de colunas: 15
+
+COLUNAS E TIPOS:
+ano                          int64
+sigla_uf                       str
+rede                           str
+taxa_alfabetizacao         float64
+meta_alfabetizacao_2024    float64
+meta_alfabetizacao_2025    float64
+meta_alfabetizacao_2026    float64
+meta_alfabetizacao_2027    float64
+meta_alfabetizacao_2028    float64
+meta_alfabetizacao_2029    float64
+meta_alfabetizacao_2030    float64
+percentual_participacao    float64
+meta_ano                   float64
+diferenca_meta             float64
+atingiu_meta                  bool
+
+VALORES AUSENTES:
+taxa_alfabetizacao          4
+meta_alfabetizacao_2024     6
+meta_alfabetizacao_2025     2
+meta_alfabetizacao_2026     2
+meta_alfabetizacao_2027     2
+meta_alfabetizacao_2028     2
+meta_alfabetizacao_2029     2
+meta_alfabetizacao_2030     2
+percentual_participacao     4
+meta_ano                   30
+diferenca_meta             30
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano sigla_uf    rede  taxa_alfabetizacao  meta_alfabetizacao_2024  meta_alfabetizacao_2025  meta_alfabetizacao_2026  meta_alfabetizacao_2027  meta_alfabetizacao_2028  meta_alfabetizacao_2029  meta_alfabetizacao_2030  percentual_participacao  meta_ano  diferenca_meta  atingiu_meta
+2024       RR Pública                 NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN       NaN             NaN         False
+2023       RR Pública                 NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN       NaN             NaN         False
+2023       AC Pública                 NaN                      NaN                     56.9                     62.2                     67.3                     72.0                     76.2                     80.0                      NaN       NaN             NaN         False
+
+
+######## CAMADA SILVER ########
+
+======================================================================
+ARQUIVO: alunos.parquet
+CAMADA: SILVER
+======================================================================
+Quantidade de registros: 10000
+Quantidade de colunas: 9
+
+COLUNAS E TIPOS:
+ano               int64
+id_municipio        str
+municipio           str
+id_aluno          int64
+serie               str
+rede                str
+presenca            str
+alfabetizado        str
+proficiencia    float64
+
+VALORES AUSENTES:
+proficiencia    3581
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano id_municipio   municipio  id_aluno                        serie      rede presenca alfabetizado  proficiencia
+2024      1100205 Porto Velho  11021678 2° ano do Ensino Fundamental Municipal  Ausente          Não           NaN
+2024      1302603      Manaus  13034848 2° ano do Ensino Fundamental Municipal  Ausente          Não           NaN
+2024      1302603      Manaus  13057477 2° ano do Ensino Fundamental  Estadual  Ausente          Não           NaN
+
+======================================================================
+ARQUIVO: ibge_municipios.parquet
+CAMADA: SILVER
+======================================================================
+Quantidade de registros: 5571
+Quantidade de colunas: 5
+
+COLUNAS E TIPOS:
+id_municipio      string
+nome_municipio       str
+sigla_uf             str
+nome_uf              str
+regiao               str
+
+VALORES AUSENTES:
+sigla_uf    1
+nome_uf     1
+regiao      1
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+id_municipio        nome_municipio sigla_uf  nome_uf regiao
+     1100015 Alta Floresta D'Oeste       RO Rondônia  Norte
+     1100023             Ariquemes       RO Rondônia  Norte
+     1100031                Cabixi       RO Rondônia  Norte
+
+======================================================================
+ARQUIVO: meta_brasil.parquet
+CAMADA: SILVER
+======================================================================
+Quantidade de registros: 3
+Quantidade de colunas: 11
+
+COLUNAS E TIPOS:
+ano                          int64
+rede                           str
+taxa_alfabetizacao         float64
+meta_alfabetizacao_2024    float64
+meta_alfabetizacao_2025    float64
+meta_alfabetizacao_2026    float64
+meta_alfabetizacao_2027    float64
+meta_alfabetizacao_2028    float64
+meta_alfabetizacao_2029    float64
+meta_alfabetizacao_2030      int64
+percentual_participacao    float64
+
+VALORES AUSENTES:
+Nenhum
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano    rede  taxa_alfabetizacao  meta_alfabetizacao_2024  meta_alfabetizacao_2025  meta_alfabetizacao_2026  meta_alfabetizacao_2027  meta_alfabetizacao_2028  meta_alfabetizacao_2029  meta_alfabetizacao_2030  percentual_participacao
+2025 Pública                66.0                     60.0                    64.00                    67.00                    71.00                    74.00                    77.00                       80                    88.00
+2024 Pública                59.2                     59.9                    63.77                    67.47                    70.97                    74.23                    77.24                       80                    87.37
+2023 Pública                55.9                     59.9                    63.77                    67.47                    70.97                    74.23                    77.24                       80                    86.00
+
+======================================================================
+ARQUIVO: meta_municipio.parquet
+CAMADA: SILVER
+======================================================================
+Quantidade de registros: 10704
+Quantidade de colunas: 13
+
+COLUNAS E TIPOS:
+ano                          int64
+id_municipio                   str
+rede                           str
+taxa_alfabetizacao         float64
+meta_alfabetizacao_2024    float64
+meta_alfabetizacao_2025    float64
+meta_alfabetizacao_2026    float64
+meta_alfabetizacao_2027    float64
+meta_alfabetizacao_2028    float64
+meta_alfabetizacao_2029    float64
+meta_alfabetizacao_2030      int64
+nivel_alfabetizacao        float64
+percentual_participacao    float64
+
+VALORES AUSENTES:
+taxa_alfabetizacao         120
+meta_alfabetizacao_2024    240
+nivel_alfabetizacao        120
+percentual_participacao    120
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano id_municipio      rede  taxa_alfabetizacao  meta_alfabetizacao_2024  meta_alfabetizacao_2025  meta_alfabetizacao_2026  meta_alfabetizacao_2027  meta_alfabetizacao_2028  meta_alfabetizacao_2029  meta_alfabetizacao_2030  nivel_alfabetizacao  percentual_participacao
+2023      4301750 Municipal                 NaN                      NaN                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  NaN                      NaN
+2024      4301750 Municipal                4.40                      NaN                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  0.0                    92.59
+2024      2406908 Municipal               42.86                     7.94                    14.05                    23.65                     37.0                    52.68                    67.85                       80                  1.0                    84.00
+
+======================================================================
+ARQUIVO: meta_uf.parquet
+CAMADA: SILVER
+======================================================================
+Quantidade de registros: 54
+Quantidade de colunas: 12
+
+COLUNAS E TIPOS:
+ano                          int64
+sigla_uf                       str
+rede                           str
+taxa_alfabetizacao         float64
+meta_alfabetizacao_2024    float64
+meta_alfabetizacao_2025    float64
+meta_alfabetizacao_2026    float64
+meta_alfabetizacao_2027    float64
+meta_alfabetizacao_2028    float64
+meta_alfabetizacao_2029    float64
+meta_alfabetizacao_2030    float64
+percentual_participacao    float64
+
+VALORES AUSENTES:
+taxa_alfabetizacao         4
+meta_alfabetizacao_2024    6
+meta_alfabetizacao_2025    2
+meta_alfabetizacao_2026    2
+meta_alfabetizacao_2027    2
+meta_alfabetizacao_2028    2
+meta_alfabetizacao_2029    2
+meta_alfabetizacao_2030    2
+percentual_participacao    4
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano sigla_uf    rede  taxa_alfabetizacao  meta_alfabetizacao_2024  meta_alfabetizacao_2025  meta_alfabetizacao_2026  meta_alfabetizacao_2027  meta_alfabetizacao_2028  meta_alfabetizacao_2029  meta_alfabetizacao_2030  percentual_participacao
+2024       RR Pública                 NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN
+2023       RR Pública                 NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN
+2023       AC Pública                 NaN                      NaN                     56.9                     62.2                     67.3                     72.0                     76.2                     80.0                      NaN
+
+======================================================================
+ARQUIVO: municipio.parquet
+CAMADA: SILVER
+======================================================================
+Quantidade de registros: 23995
+Quantidade de colunas: 15
+
+COLUNAS E TIPOS:
+ano                          int64
+id_municipio                   str
+serie                        int64
+rede                         int64
+taxa_alfabetizacao         float64
+media_portugues            float64
+proporcao_aluno_nivel_0    float64
+proporcao_aluno_nivel_1    float64
+proporcao_aluno_nivel_2    float64
+proporcao_aluno_nivel_3    float64
+proporcao_aluno_nivel_4    float64
+proporcao_aluno_nivel_5    float64
+proporcao_aluno_nivel_6    float64
+proporcao_aluno_nivel_7    float64
+proporcao_aluno_nivel_8    float64
+
+VALORES AUSENTES:
+proporcao_aluno_nivel_0    11547
+proporcao_aluno_nivel_1    11547
+proporcao_aluno_nivel_2    11547
+proporcao_aluno_nivel_3    11547
+proporcao_aluno_nivel_4    11547
+proporcao_aluno_nivel_5    11547
+proporcao_aluno_nivel_6    11547
+proporcao_aluno_nivel_7    11547
+proporcao_aluno_nivel_8    11547
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano id_municipio  serie  rede  taxa_alfabetizacao  media_portugues  proporcao_aluno_nivel_0  proporcao_aluno_nivel_1  proporcao_aluno_nivel_2  proporcao_aluno_nivel_3  proporcao_aluno_nivel_4  proporcao_aluno_nivel_5  proporcao_aluno_nivel_6  proporcao_aluno_nivel_7  proporcao_aluno_nivel_8
+2023      1100031      2     3               69.10         767.8763                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN
+2023      1100072      2     3               58.20         747.8918                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN
+2023      1100189      2     5               69.73         762.4062                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN
+
+======================================================================
+ARQUIVO: uf.parquet
+CAMADA: SILVER
+======================================================================
+Quantidade de registros: 145
+Quantidade de colunas: 15
+
+COLUNAS E TIPOS:
+ano                          int64
+sigla_uf                       str
+serie                        int64
+rede                         int64
+taxa_alfabetizacao         float64
+media_portugues            float64
+proporcao_aluno_nivel_0    float64
+proporcao_aluno_nivel_1    float64
+proporcao_aluno_nivel_2    float64
+proporcao_aluno_nivel_3    float64
+proporcao_aluno_nivel_4    float64
+proporcao_aluno_nivel_5    float64
+proporcao_aluno_nivel_6    float64
+proporcao_aluno_nivel_7    float64
+proporcao_aluno_nivel_8    float64
+
+VALORES AUSENTES:
+proporcao_aluno_nivel_0    70
+proporcao_aluno_nivel_1    70
+proporcao_aluno_nivel_2    70
+proporcao_aluno_nivel_3    70
+proporcao_aluno_nivel_4    70
+proporcao_aluno_nivel_5    70
+proporcao_aluno_nivel_6    70
+proporcao_aluno_nivel_7    70
+proporcao_aluno_nivel_8    70
+
+Registros duplicados: 0
+
+AMOSTRA DOS DADOS:
+ ano sigla_uf  serie  rede  taxa_alfabetizacao  media_portugues  proporcao_aluno_nivel_0  proporcao_aluno_nivel_1  proporcao_aluno_nivel_2  proporcao_aluno_nivel_3  proporcao_aluno_nivel_4  proporcao_aluno_nivel_5  proporcao_aluno_nivel_6  proporcao_aluno_nivel_7  proporcao_aluno_nivel_8
+2023       AM      2     3               49.20         733.6637                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN
+2023       PB      2     2               55.23         744.8152                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN
+2023       PR      2     5               73.12         757.2146                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN                      NaN

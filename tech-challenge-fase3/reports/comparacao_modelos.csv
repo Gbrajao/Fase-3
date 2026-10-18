@@ -1,0 +1,4 @@
+modelo,acuracia,acuracia_balanceada,roc_auc,recall_classe_0,f1_classe_0
+Regressão Logística,0.6328,0.5484,0.5989,0.19362186788154898,0.29
+Logística Balanceada,0.5668,0.5678,0.5991,0.571753986332574,0.5
+Random Forest,0.5538,0.5647,0.5991,0.6104783599088838,0.51

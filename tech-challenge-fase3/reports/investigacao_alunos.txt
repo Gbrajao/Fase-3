@@ -1,0 +1,45 @@
+
+=== DISTRIBUIÇÃO DE ALFABETIZAÇÃO ===
+alfabetizado
+Não    6027
+Sim    3973
+Name: count, dtype: int64
+
+=== DISTRIBUIÇÃO DE PRESENÇA ===
+presenca
+Presente    6426
+Ausente     3574
+Name: count, dtype: int64
+
+=== PRESENÇA X ALFABETIZAÇÃO ===
+alfabetizado   Não   Sim
+presenca                
+Ausente       3574     0
+Presente      2453  3973
+
+=== PROFICIÊNCIA POR ALFABETIZAÇÃO ===
+              count     min        mean     max
+alfabetizado                                   
+Não            2446  605.34  702.505857  742.99
+Sim            3973  743.03  782.205344  896.10
+
+=== PROFICIÊNCIA AUSENTE POR PRESENÇA ===
+proficiencia  False  True 
+presenca                  
+Ausente           0   3574
+Presente       6419      7
+
+=== REGRA DE 743 PONTOS ===
+alfabetizado   Não   Sim
+regra_743               
+False         2446     0
+True             0  3973
+
+=== DISTRIBUIÇÃO POR REDE ===
+rede
+Municipal    8745
+Estadual     1255
+Name: count, dtype: int64
+
+=== MUNICÍPIOS REPRESENTADOS ===
+2773

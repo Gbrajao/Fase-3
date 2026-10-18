@@ -1,0 +1,11 @@
+{
+    "total_alunos": 1130,
+    "total_municipios": 454,
+    "acuracia": 0.620353982300885,
+    "acuracia_balanceada": 0.6135367568014554,
+    "roc_auc": 0.6677730918713305,
+    "f1_macro": 0.6089463889433397,
+    "precision_classe_0": 0.5059760956175299,
+    "recall_classe_0": 0.5839080459770115,
+    "recall_classe_1": 0.6431654676258993
+}
