@@ -1,0 +1,35 @@
+{
+  "fonte": "IBGE - Censo Demográfico 2022 - SIDRA",
+  "tabela_sidra": 10295,
+  "indicador": "Rendimento nominal médio mensal domiciliar per capita",
+  "ano_referencia": 2022,
+  "observacao_fonte": "Resultados preliminares da amostra, conforme nota metodológica presente no arquivo original.",
+  "data_auditoria": "2026-10-30",
+  "bronze": {
+    "registros_lidos_apos_cabecalho": 5587,
+    "registros_municipais": 5570,
+    "registros_complementares": 17,
+    "municipios_duplicados": 0
+  },
+  "silver": {
+    "registros": 5570,
+    "municipios_unicos": 5570,
+    "rendas_ausentes": 0,
+    "rendas_negativas": 0,
+    "rendas_iguais_zero": 0,
+    "renda_media_reais": 1211.59,
+    "renda_mediana_reais": 1182.54,
+    "renda_minima_reais": 288.65,
+    "renda_maxima_reais": 4299.91
+  },
+  "validacoes": {
+    "quantidade_municipios_5570": true,
+    "codigos_unicos": true,
+    "codigos_com_sete_digitos": true,
+    "sem_rendas_ausentes": true,
+    "rendas_positivas": true,
+    "sem_perda_de_municipios": true,
+    "grupo_idade_total": true
+  },
+  "aprovado": true
+}
